@@ -1,0 +1,259 @@
+<!-- 本引流站由serika搭建，源码为sst.gingshan.eu.org -->
+
+<!-- IK公益祝各位sensei新春快乐！-->
+
+<!-- blue archive自适应随机图片: api.ikgy.top -->
+
+<!-- https://www.bilibili.com/video/BV15YqdYJEJL?spm_id_from=333.788.recommend_more_video.0&vd_source=1d76eca49744b153281a2d5f33e972f5 -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="msvalidate.01" content="A2D5A7E785A2D0E22DF5E6E5936FAF5F" />
+    <meta name="robots" content="all">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="西南,西南小镇,西南小镇服务器,mc,mc服务器,java服务器,基岩版服务器,西,小镇,JAVA服务器" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="欢迎来到“西南小镇”。这里是一个由五人精心搭建的服务器，致力于为玩家们提供一个和平交流的环境。在这里，没有玩家间的攻击与纷争，只有友好与互助。你可以放心地探索、建造，与来自五湖四海的玩家共同分享游戏的乐趣。加入我们，一起打造这个温馨和谐的西南小镇吧!" />
+    <link rel="icon" href="/images/fav.webp" type="image/x-icon">
+    <title>西南小镇-宁静、和平、友好的MC服务器</title>
+    <style>
+        .loader {  
+            position: fixed;
+        }  
+        .video {  
+            object-fit: cover;
+        }  
+        .loadvideo.hide {
+            opacity: 0;
+        }
+        .loadvideo {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            z-index: 9999;
+            transition: opacity 2s ease
+        }
+        body {
+            margin: 0%;
+            padding: 0%;
+            display:inline;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: black;
+            width: 100%;
+            background-image: url("images/bg.png");
+            background-position: center;
+            background-size: cover;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .header {
+            background-color: #00000044;
+            color: #fff;
+            height: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            transition:300ms ease;
+            position: fixed;
+            width: 100%;
+        }
+        .header p {
+            width: 30%;
+            transition:300ms ease;
+        }
+        .header-link { 
+            float: right;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 10px;
+            transition:300ms ease;
+        }
+        .header a:hover {
+            background-color: #ffffff3a;
+            border-radius: 5px;
+            border-inline-start: 2px solid #fff;
+            transition:300ms ease;
+        }
+        .header-title {
+            float: left;
+            padding: 10px;
+            font-family: kaiti;
+            margin-left: 10px;
+            font-size: large;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            height: 100%;
+        }
+        .content-title {
+            background-color: rgba(0, 0, 0, 0.151);
+            color: #fff;
+            font-size: larger;
+            text-align: center;
+            padding-top: 200px;
+            padding-bottom: 100px;
+            width: 100%;
+            min-height: 500px;
+        }
+        .content-link { 
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            transition: 1000ms ease;
+            list-style-type: none;
+            background: linear-gradient(50deg, rgba(67, 67, 255, 0.356), rgba(255, 192, 203, 0.363));
+        }
+        .content-link:hover { 
+            background-color: lightskyblue;
+            transition: 1000ms ease;
+        }
+        .content-body {
+            margin: 0px;
+            background-color: rgba(5, 5, 5, 0.966);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            height: auto;
+            display: flex;
+            padding: 10px;
+        }
+        .content-box {
+            border: 2px solid #ffffff13;
+            background-color: rgba(5, 5, 5, 0.966);
+            transition: 1000ms ease;
+            padding: 10px;
+            margin: 20px;
+            color: #fff;
+            width: auto;
+            height: auto;
+            border: 2px solid #ffffff25;
+            border-radius: 10px;
+        }
+        .content-box:hover {
+            border: 2px solid #ffffff7c;
+            transition: 1000ms ease;
+        }
+        .content-box-1 {
+            width: 75%;
+        }
+        @media (min-width: 0px) and (max-width:1000px) {
+           .content-box-1 {
+                width: 100%;
+            }
+            .content-body {
+            display: block;
+            }
+        }
+    </style>
+</head>
+
+<body onload="scrollTo(0,0)">
+    <div id="loader">
+        <!-- 加载视频 -->
+        <div class="loadvideo" id="loadvideo">
+        <video id="video" src="images/logo.mp4" autoplay loop muted width="100%" height="100%"></video>
+        </div>
+    </div>
+    <div class="header" id="header">
+        <ul>
+        <li><a class="header-link" href="https://qm.qq.com/q/wUhfLFPOfY">加入群聊</a></li>
+        <li><a class="header-link" href="https://www.ikgy.top">IK公益官网</a></li>
+        <li><a class="header-title">西南小镇服务器</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="content-title">
+            <h1>西南小镇服务器</h1>
+            <h3>一个没有纷乱的世外桃源</h3>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113914461293473&bvid=BV12eFGeMEvv&cid=28145748603&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            <h3>SST团队祝诸位访客蛇年快乐！</h3>
+            <a class="content-link" href="https://qm.qq.com/q/wUhfLFPOfY">加入我们</a>
+        </div>
+        <div class="content-body">
+            <div class="content-box" id="content-box-1">
+                <h2>这就是西南</h2>
+                <p>欢迎来到“西南小镇”。这里是一个由五人精心搭建的服务器，致力于为玩家们提供一个和平交流的环境。在这里，没有玩家间的攻击与纷争，只有友好与互助。你可以放心地探索、建造，与来自五湖四海的玩家共同分享游戏的乐趣。加入我们，一起打造这个温馨和谐的西南小镇吧!</p>
+            </div>
+            <div class="content-box">
+            <h2>服务器地址</h2>
+            <p>若要加入服务器，请先加入群聊并且完成绑定。</p>
+        </div>
+        <div class="content-box">
+            <h2>访客须知</h2>
+            <p>本站为SST引流节点，正版链接为<a href="https://sst.gingshan.eu.org">sst.gingshan.eu.org</a>，感谢配合</p>
+        </div>
+       <div class="content-box">
+            <h2><a href="./images/zbcf.mp4">访客须知</a></h2>
+            <p>超人强超人强，越超人越强</br>一天不超人，手就不老实
+            <!--iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113724442544444&bvid=BV15PCWY6EjW&cid=27560577587&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe-->
+        </div>
+        <footer style="color: white;">
+            Copyright &copy; 2025 SouthwestServerTeam. All rights reserved.
+        </footer>
+        </div>
+    </div>
+  <script>
+
+
+        const video = document.getElementById('loadvideo');
+
+        function showLoader() {
+        // 显示加载器
+        document.getElementById("loader").style.display = "block";
+        }
+
+        function hideLoader() {
+        // 隐藏加载器
+        document.getElementById("loader").style.display = "none";
+        }
+        window.addEventListener("load", function() {
+        location.href = "#top";
+        video.classList.toggle("hide");
+        });
+        window.addEventListener("load", function() {
+        setTimeout(hideLoader, 2500);
+        });
+
+        document.querySelector('header').animate(
+      {
+        backgroundColor: ['red', 'darkred'],
+        transform: ['scaleX(0)', 'scaleX(1)'],
+      },
+      {
+    duration: 2500,
+    fill: 'forwards',
+    easing: 'linear',
+   }
+);
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

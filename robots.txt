@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /sitemap.xml
+Allow: /
+Allow: /#top
+
+Sitemap: https://sst.ikgy.top/sitemap1.xml
+
